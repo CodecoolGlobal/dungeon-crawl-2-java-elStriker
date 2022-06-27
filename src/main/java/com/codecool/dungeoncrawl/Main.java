@@ -52,6 +52,7 @@ public class Main extends Application {
 
     private void onKeyPressed(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
+            //pick up item on key pressed F
             case UP:
                 map.getPlayer().move(0, -1);
                 refresh();
