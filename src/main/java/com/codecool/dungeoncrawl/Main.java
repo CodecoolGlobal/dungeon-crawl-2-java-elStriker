@@ -21,6 +21,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.Optional;
+
 public class Main extends Application {
     GameMap map = MapLoader.loadMap();
     Canvas canvas = new Canvas(
@@ -100,7 +102,11 @@ public class Main extends Application {
                 if (cell.getActor() != null) {
                     Tiles.drawTile(context, cell.getActor(), x, y);
                 } else if (cell.getItem() != null) {
-                    Tiles.drawTile(context, cell.getItem(), x, y);
+                    if (!cell.getItem().isPickedUp()) {
+                        Tiles.drawTile(context, cell.getItem(), x, y);
+                    } else {
+                        Tiles.drawTile(context, cell, x, y);
+                    }
                 } else {
                     Tiles.drawTile(context, cell, x, y);
                 }

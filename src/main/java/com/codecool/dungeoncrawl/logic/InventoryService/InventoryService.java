@@ -13,5 +13,6 @@ public class InventoryService {
 
     public void pickUpItem(Item item) {
         playerInventory.playerInventory.add(item.toString());
+        item.setPickedUp(true);
     }
 }
