@@ -1,9 +1,14 @@
 package com.codecool.dungeoncrawl;
 
+import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.logic.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
+import com.codecool.dungeoncrawl.logic.InventoryService.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
+import com.codecool.dungeoncrawl.logic.actors.Player;
 import com.codecool.dungeoncrawl.logic.items.Item;
+import com.codecool.dungeoncrawl.logic.items.Pickaxe;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -23,6 +28,9 @@ public class Main extends Application {
             map.getHeight() * Tiles.TILE_WIDTH);
     GraphicsContext context = canvas.getGraphicsContext2D();
     Label healthLabel = new Label();
+    Label playerInventory = new Label();
+    PlayerInventory inventory = new PlayerInventory();
+    InventoryService inventoryService = new InventoryService(inventory);
 
     public static void main(String[] args) {
         launch(args);
@@ -36,6 +44,9 @@ public class Main extends Application {
 
         ui.add(new Label("Health: "), 0, 0);
         ui.add(healthLabel, 1, 0);
+
+        ui.add(new Label("Inventory: "), 2, 0);
+        ui.add(playerInventory, 3, 0);
 
         BorderPane borderPane = new BorderPane();
 
@@ -70,6 +81,13 @@ public class Main extends Application {
                 map.getPlayer().move(1,0);
                 refresh();
                 break;
+            case F:
+                Player player = map.getPlayer();
+                Cell playerCell = (map.getCell(player.getX(), player.getY()));
+                Item item = playerCell.getItem();
+                inventoryService.pickUpItem(item);
+                refresh();
+                break;
         }
     }
 
@@ -89,5 +107,6 @@ public class Main extends Application {
             }
         }
         healthLabel.setText("" + map.getPlayer().getHealth());
+        playerInventory.setText("" + inventory.playerInventory.size());
     }
 }
