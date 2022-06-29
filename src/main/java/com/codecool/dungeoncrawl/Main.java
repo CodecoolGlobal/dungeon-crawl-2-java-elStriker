@@ -117,6 +117,7 @@ public class Main extends Application {
             Label label = new Label();
             label.setText(itemName.getTileName());
             ui.add(label, 0, i + 2);
+            System.out.println(inventoryService.hasKey());
             }
         }
     }
