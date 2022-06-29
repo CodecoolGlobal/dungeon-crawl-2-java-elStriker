@@ -2,13 +2,11 @@ package com.codecool.dungeoncrawl;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.Cell;
-import com.codecool.dungeoncrawl.logic.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.InventoryService.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.logic.actors.Player;
 import com.codecool.dungeoncrawl.logic.items.Item;
-import com.codecool.dungeoncrawl.logic.items.Pickaxe;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -33,6 +31,7 @@ public class Main extends Application {
     Label playerInventory = new Label();
     PlayerInventory inventory = new PlayerInventory();
     InventoryService inventoryService = new InventoryService(inventory);
+    GridPane ui = new GridPane();
 
     public static void main(String[] args) {
         launch(args);
@@ -40,15 +39,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        GridPane ui = new GridPane();
         ui.setPrefWidth(200);
-        ui.setPadding(new Insets(10));
+        ui.setPadding(new Insets(50));
 
         ui.add(new Label("Health: "), 0, 0);
         ui.add(healthLabel, 1, 0);
 
-        ui.add(new Label("Inventory: "), 2, 0);
-        ui.add(playerInventory, 3, 0);
+        ui.add(new Label("Inventory: "), 0, 1);
+        //ui.add(playerInventory, 0, 2);
 
         BorderPane borderPane = new BorderPane();
 
@@ -80,7 +78,7 @@ public class Main extends Application {
                 refresh();
                 break;
             case RIGHT:
-                map.getPlayer().move(1,0);
+                map.getPlayer().move(1, 0);
                 refresh();
                 break;
             case F:
@@ -93,6 +91,7 @@ public class Main extends Application {
         }
     }
 
+    //ui
     private void refresh() {
         context.setFill(Color.BLACK);
         context.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
@@ -113,6 +112,11 @@ public class Main extends Application {
             }
         }
         healthLabel.setText("" + map.getPlayer().getHealth());
-        playerInventory.setText("" + inventory.playerInventory.size());
+        for (int i = 0; i < inventory.playerInventory.size(); i++) {
+            Item itemName = inventory.playerInventory.get(i);
+            Label label = new Label();
+            label.setText(itemName.getTileName());
+            ui.add(label, 0, i + 2);
+            }
+        }
     }
-}

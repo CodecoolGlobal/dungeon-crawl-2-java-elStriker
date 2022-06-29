@@ -1,8 +1,10 @@
 package com.codecool.dungeoncrawl.data;
 
+import com.codecool.dungeoncrawl.logic.items.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerInventory {
-    public List<String> playerInventory = new ArrayList<String>();
-}
+    public List<Item> playerInventory = new ArrayList<>();
+}   //item object into list ask markus
