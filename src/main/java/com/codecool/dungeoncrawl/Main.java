@@ -2,6 +2,7 @@ package com.codecool.dungeoncrawl;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.logic.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.InventoryService.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
@@ -88,6 +89,16 @@ public class Main extends Application {
                 inventoryService.pickUpItem(item);
                 refresh();
                 break;
+            case R:
+                player = map.getPlayer();
+                playerCell = (map.getCell(player.getX(), player.getY()));
+                Cell nextCell = playerCell.getNeighbor(-1, 0);
+                if (nextCell.getType() == CellType.ClOSEDDOOR) {
+                    if (inventoryService.hasKey()){
+                        map.getCell(nextCell.getX(), nextCell.getY()).setType(CellType.OPENDOOR);
+                    }
+                } refresh();
+
         }
     }
 
