@@ -10,4 +10,9 @@ public class Player extends Actor {
     public String getTileName() {
         return "player";
     }
+
+    @Override
+    public int getInitialHealth() {
+        return 30;
+    }
 }
