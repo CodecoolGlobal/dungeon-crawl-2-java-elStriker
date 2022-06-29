@@ -9,6 +9,7 @@ public abstract class Actor implements Drawable {
     public Actor(Cell cell) {
         this.cell = cell;
         this.cell.setActor(this);
+        this.health = getInitialHealth();
     }
 
     public void move(int dx, int dy) {
