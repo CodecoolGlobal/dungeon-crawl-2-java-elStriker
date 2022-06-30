@@ -8,6 +8,7 @@ import com.codecool.dungeoncrawl.logic.services.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.items.Item;
+import com.codecool.dungeoncrawl.logic.services.MovementService;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -20,8 +21,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class Main extends Application {
     GameMap map = MapLoader.loadMap();
+    MovementService movementService = new MovementService();
     Canvas canvas = new Canvas(
             map.getWidth() * Tiles.TILE_WIDTH,
             map.getHeight() * Tiles.TILE_WIDTH);
@@ -65,23 +69,27 @@ public class Main extends Application {
         switch (keyEvent.getCode()) {
             //pick up item on key pressed F
             case UP:
-                map.getPlayer().move(0, -1);
+                Player player = map.getPlayer();
+                movementService.move(player, 0, -1);
                 refresh();
                 break;
             case DOWN:
-                map.getPlayer().move(0, 1);
+                player = map.getPlayer();
+                movementService.move(player, 0, 1);
                 refresh();
                 break;
             case LEFT:
-                map.getPlayer().move(-1, 0);
+                player = map.getPlayer();
+                movementService.move(player, -1 , 0);
                 refresh();
                 break;
             case RIGHT:
-                map.getPlayer().move(1, 0);
+                player = map.getPlayer();
+                movementService.move(player, 1, 0);
                 refresh();
                 break;
             case F:
-                Player player = map.getPlayer();
+                player = map.getPlayer();
                 Cell playerCell = (map.getCell(player.getX(), player.getY()));
                 Item item = playerCell.getItem();
                 inventoryService.pickUpItem(item);
