@@ -1,4 +1,4 @@
-package com.codecool.dungeoncrawl.logic;
+package com.codecool.dungeoncrawl.logic.services;
 
 import com.codecool.dungeoncrawl.data.actors.Actor;
 

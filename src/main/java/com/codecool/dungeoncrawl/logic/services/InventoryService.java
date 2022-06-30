@@ -1,4 +1,4 @@
-package com.codecool.dungeoncrawl.logic.InventoryService;
+package com.codecool.dungeoncrawl.logic.services;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.data.items.Item;

@@ -1,6 +1,6 @@
 package com.codecool.dungeoncrawl.data.actors;
 
-import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.data.Cell;
 
 public class Skeleton extends Actor {
     private final int INITIAL_HEALTH = 10;
