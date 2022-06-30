@@ -10,5 +10,18 @@ public class CombatService {
         int fighter2Health = fighter2.getHealth();
         fighter1.setHealth(player1Health - fighter2Power);
         fighter2.setHealth(fighter2Health - fighter1Power);
+        if (hasDied(fighter1)) {
+            fighter1.getCell().setActor(null);
+        }
+        if (hasDied(fighter2)) {
+            fighter2.getCell().setActor(null);
+        }
+    }
+
+    public boolean hasDied(Actor actor) {
+        if (actor.getHealth() < 1) {
+            return true;
+        }
+        return false;
     }
 }
