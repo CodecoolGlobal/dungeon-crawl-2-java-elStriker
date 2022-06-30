@@ -1,7 +1,6 @@
-package com.codecool.dungeoncrawl.logic.actors;
+package com.codecool.dungeoncrawl.data.actors;
 
 import com.codecool.dungeoncrawl.logic.Cell;
-import lombok.Getter;
 
 public class Player extends Actor {
     final static int INITIAL_STRENGTH = 5;

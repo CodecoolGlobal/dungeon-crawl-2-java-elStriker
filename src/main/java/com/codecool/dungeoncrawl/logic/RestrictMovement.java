@@ -1,6 +1,7 @@
-package com.codecool.dungeoncrawl.logic.actors;
+package com.codecool.dungeoncrawl.logic;
 
-import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.data.actors.Skeleton;
+
 //refactor the class
 public class RestrictMovement {
     public boolean isValidMove(Cell nextCell) {
