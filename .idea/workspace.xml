@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="060b18be-fc45-40e1-87d7-cd27eb9effff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/services/MovementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/services/MovementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/services/CombatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/CombatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/services/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/services/MovementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/services/CombatService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/services/InventoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/services/MovementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +94,27 @@
       <recent name="com.codecool.dungeoncrawl.logic" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CellTest">
+  <component name="RunManager" selected="JUnit.ActorTest">
+    <configuration name="ActorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ActorTest.cannotMoveIntoAnotherActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dungeon-crawl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.services.*" />
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,27 +126,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActorTest.cannotMoveIntoWall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dungeon-crawl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
-      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
-      <option name="METHOD_NAME" value="cannotMoveIntoWall" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ActorTest.cannotMoveOutOfMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dungeon-crawl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.services.*" />
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,7 +146,7 @@
       <module name="dungeon-crawl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.services.*" />
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,7 +162,7 @@
       <module name="dungeon-crawl" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.services.*" />
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ActorTest" />
+        <item itemvalue="JUnit.ActorTest.moveUpdatesCells" />
         <item itemvalue="JUnit.CellTest" />
         <item itemvalue="JUnit.ActorTest.cannotMoveIntoAnotherActor" />
         <item itemvalue="JUnit.ActorTest.cannotMoveOutOfMap" />
-        <item itemvalue="JUnit.ActorTest.cannotMoveIntoWall" />
-        <item itemvalue="JUnit.ActorTest.moveUpdatesCells" />
       </list>
     </recent_temporary>
   </component>
