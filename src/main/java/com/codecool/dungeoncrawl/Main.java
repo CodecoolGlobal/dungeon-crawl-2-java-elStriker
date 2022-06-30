@@ -68,22 +68,22 @@ public class Main extends Application {
             //pick up item on key pressed F
             case UP:
                 Player player = map.getPlayer();
-                movementService.move(player, 0, -1);
+                movementService.move(player, inventoryService, 0, -1);
                 refresh();
                 break;
             case DOWN:
                 player = map.getPlayer();
-                movementService.move(player,  0, 1);
+                movementService.move(player, inventoryService, 0, 1);
                 refresh();
                 break;
             case LEFT:
                 player = map.getPlayer();
-                movementService.move(player, -1 , 0);
+                movementService.move(player, inventoryService, -1 , 0);
                 refresh();
                 break;
             case RIGHT:
                 player = map.getPlayer();
-                movementService.move(player, 1, 0);
+                movementService.move(player, inventoryService,1, 0);
                 refresh();
                 break;
             case F:
@@ -93,16 +93,6 @@ public class Main extends Application {
                 inventoryService.pickUpItem(item);
                 refresh();
                 break;
-            case R:
-                player = map.getPlayer();
-                playerCell = (map.getCell(player.getX(), player.getY()));
-                Cell nextCell = playerCell.getNeighbor(-1, 0);
-                if (nextCell.getType() == CellType.ClOSEDDOOR) {
-                    if (inventoryService.hasKey()){
-                        map.getCell(nextCell.getX(), nextCell.getY()).setType(CellType.OPENDOOR);
-                    }
-                } refresh();
-
         }
     }
 
