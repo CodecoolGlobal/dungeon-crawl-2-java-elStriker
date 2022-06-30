@@ -40,12 +40,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="refactoring" />
-                    <option name="lastUsedInstant" value="1656578565" />
+                    <option name="branchName" value="ElStriker" />
+                    <option name="lastUsedInstant" value="1656583524" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="development" />
-                    <option name="lastUsedInstant" value="1656578564" />
+                    <option name="lastUsedInstant" value="1656581569" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="refactoring" />
+                    <option name="lastUsedInstant" value="1656578565" />
                   </RecentBranch>
                 </list>
               </option>

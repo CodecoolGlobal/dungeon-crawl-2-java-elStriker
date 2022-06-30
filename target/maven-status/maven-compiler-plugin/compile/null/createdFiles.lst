@@ -4,11 +4,14 @@ com/codecool/dungeoncrawl/data/actors/Player.class
 com/codecool/dungeoncrawl/data/PlayerInventory.class
 com/codecool/dungeoncrawl/data/actors/Actor.class
 com/codecool/dungeoncrawl/data/CellType.class
+
 com/codecool/dungeoncrawl/logic/MovementService.class
 com/codecool/dungeoncrawl/logic/InventoryService.class
 com/codecool/dungeoncrawl/logic/CombatService.class
 com/codecool/dungeoncrawl/data/items/Item.class
+
 com/codecool/dungeoncrawl/data/items/Key.class
+com/codecool/dungeoncrawl/data/items/Item.class
 com/codecool/dungeoncrawl/data/items/Sword.class
 com/codecool/dungeoncrawl/data/actors/Skeleton.class
 com/codecool/dungeoncrawl/data/items/Pickaxe.class
