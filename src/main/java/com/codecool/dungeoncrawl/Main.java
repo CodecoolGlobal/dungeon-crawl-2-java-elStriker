@@ -73,7 +73,7 @@ public class Main extends Application {
                 break;
             case DOWN:
                 player = map.getPlayer();
-                movementService.move(player, 0, 1);
+                movementService.move(player,  0, 1);
                 refresh();
                 break;
             case LEFT:

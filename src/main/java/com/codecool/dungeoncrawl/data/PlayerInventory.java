@@ -7,4 +7,4 @@ import java.util.List;
 
 public class PlayerInventory {
     public List<Item> playerInventory = new ArrayList<>();
-}   //item object into list ask markus
+}
