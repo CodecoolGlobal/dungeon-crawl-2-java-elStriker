@@ -1,6 +1,6 @@
 package com.codecool.dungeoncrawl.data.actors;
 
-import com.codecool.dungeoncrawl.logic.Cell;
+import com.codecool.dungeoncrawl.data.Cell;
 
 public class Player extends Actor {
     final static int INITIAL_STRENGTH = 5;

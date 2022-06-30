@@ -1,10 +1,10 @@
 package com.codecool.dungeoncrawl;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
-import com.codecool.dungeoncrawl.logic.Cell;
-import com.codecool.dungeoncrawl.logic.CellType;
+import com.codecool.dungeoncrawl.data.Cell;
+import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
-import com.codecool.dungeoncrawl.logic.InventoryService.InventoryService;
+import com.codecool.dungeoncrawl.logic.services.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.items.Item;
@@ -126,7 +126,6 @@ public class Main extends Application {
             Label label = new Label();
             label.setText(itemName.getTileName());
             ui.add(label, 0, i + 2);
-            System.out.println(inventoryService.hasKey());
             }
         }
     }
