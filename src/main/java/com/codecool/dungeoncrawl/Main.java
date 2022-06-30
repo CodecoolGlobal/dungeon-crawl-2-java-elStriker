@@ -4,11 +4,11 @@ import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.data.Cell;
 import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
-import com.codecool.dungeoncrawl.logic.services.InventoryService;
+import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.items.Item;
-import com.codecool.dungeoncrawl.logic.services.MovementService;
+import com.codecool.dungeoncrawl.logic.MovementService;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -20,8 +20,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.awt.*;
 
 public class Main extends Application {
     GameMap map = MapLoader.loadMap();
