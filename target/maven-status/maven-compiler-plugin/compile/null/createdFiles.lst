@@ -2,6 +2,7 @@ com/codecool/dungeoncrawl/logic/items/Item.class
 com/codecool/dungeoncrawl/logic/items/Key.class
 com/codecool/dungeoncrawl/logic/InventoryService/InventoryService.class
 com/codecool/dungeoncrawl/logic/items/Sword.class
+com/codecool/dungeoncrawl/logic/CombatService.class
 com/codecool/dungeoncrawl/data/PlayerInventory.class
 com/codecool/dungeoncrawl/logic/items/Pickaxe.class
 com/codecool/dungeoncrawl/logic/actors/RestrictMovement.class
