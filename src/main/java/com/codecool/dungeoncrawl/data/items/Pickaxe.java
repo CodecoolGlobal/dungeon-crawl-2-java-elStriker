@@ -1,4 +1,4 @@
-package com.codecool.dungeoncrawl.logic.items;
+package com.codecool.dungeoncrawl.data.items;
 
 import com.codecool.dungeoncrawl.logic.Cell;
 
