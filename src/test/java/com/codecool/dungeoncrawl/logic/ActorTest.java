@@ -1,6 +1,7 @@
 package com.codecool.dungeoncrawl.logic;
 
 import com.codecool.dungeoncrawl.data.CellType;
+import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.actors.Skeleton;
 import org.junit.jupiter.api.Test;
@@ -10,11 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class ActorTest {
     GameMap gameMap = new GameMap(3, 3, CellType.FLOOR);
     MovementService movementService = new MovementService();
+    PlayerInventory inventory = new PlayerInventory();
+    InventoryService inventoryService = new InventoryService(inventory);
 
     @Test
     void moveUpdatesCells() {
         Player player = new Player(gameMap.getCell(1, 1));
-        movementService.move(player, 1, 0);
+        movementService.move(player, inventoryService,1, 0);
 
         assertEquals(2, player.getX());
         assertEquals(1, player.getY());
@@ -26,7 +29,7 @@ class ActorTest {
     void cannotMoveIntoWall() {
         gameMap.getCell(2, 1).setType(CellType.WALL);
         Player player = new Player(gameMap.getCell(1, 1));
-        movementService.move(player,1, 0);
+        movementService.move(player,inventoryService,1, 0);
 
         assertEquals(1, player.getX());
         assertEquals(1, player.getY());
@@ -35,7 +38,7 @@ class ActorTest {
     @Test
     void cannotMoveOutOfMap() {
         Player player = new Player(gameMap.getCell(2, 1));
-        movementService.move(player,1, 0);
+        movementService.move(player, inventoryService, 1, 0);
 
         assertEquals(2, player.getX());
         assertEquals(1, player.getY());
@@ -45,7 +48,7 @@ class ActorTest {
     void cannotMoveIntoAnotherActor() {
         Player player = new Player(gameMap.getCell(1, 1));
         Skeleton skeleton = new Skeleton(gameMap.getCell(2, 1));
-        movementService.move(player, 1, 0);
+        movementService.move(player,inventoryService, 1, 0);
 
         assertEquals(1, player.getX());
         assertEquals(1, player.getY());
