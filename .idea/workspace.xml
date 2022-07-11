@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="060b18be-fc45-40e1-87d7-cd27eb9effff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/CellType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/PlayerInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Skeleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Pickaxe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Sword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/CombatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/RestrictMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles$Tile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/CellType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/PlayerInventory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Actor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Skeleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Key.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Pickaxe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Sword.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/CombatService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/Drawable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/GameMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/InventoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MapLoader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/RestrictMovement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/tiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/ActorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/CellTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/ActorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/ActorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/CellTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="old_development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="development" />
+                    <option name="lastUsedInstant" value="1657536195" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2B9YQSrGmgdQfSdh3gTwgq1O2u3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-1-java-elStriker&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.codecool.dungeoncrawl.logic.items" />
+      <recent name="com.codecool.dungeoncrawl.logic.InventoryService" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.codecool.dungeoncrawl.logic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ActorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActorTest.cannotMoveIntoAnotherActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
+      <option name="METHOD_NAME" value="cannotMoveIntoAnotherActor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActorTest.cannotMoveOutOfMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
+      <option name="METHOD_NAME" value="cannotMoveOutOfMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActorTest.moveUpdatesCells" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.ActorTest" />
+      <option name="METHOD_NAME" value="moveUpdatesCells" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dungeon-crawl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.dungeoncrawl.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.dungeoncrawl.logic" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.dungeoncrawl.logic.CellTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ActorTest" />
+        <item itemvalue="JUnit.ActorTest.moveUpdatesCells" />
+        <item itemvalue="JUnit.CellTest" />
+        <item itemvalue="JUnit.ActorTest.cannotMoveIntoAnotherActor" />
+        <item itemvalue="JUnit.ActorTest.cannotMoveOutOfMap" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="060b18be-fc45-40e1-87d7-cd27eb9effff" name="Changes" comment="" />
+      <created>1656319752124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656319752124</updated>
+      <workItem from="1656319753271" duration="43000" />
+      <workItem from="1656319804995" duration="14171000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

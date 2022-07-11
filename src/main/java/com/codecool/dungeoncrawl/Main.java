@@ -5,6 +5,14 @@ import com.codecool.dungeoncrawl.logic.Cell;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.logic.actors.Player;
+import com.codecool.dungeoncrawl.data.PlayerInventory;
+import com.codecool.dungeoncrawl.data.Cell;
+import com.codecool.dungeoncrawl.logic.GameMap;
+import com.codecool.dungeoncrawl.logic.InventoryService;
+import com.codecool.dungeoncrawl.logic.MapLoader;
+import com.codecool.dungeoncrawl.data.actors.Player;
+import com.codecool.dungeoncrawl.data.items.Item;
+import com.codecool.dungeoncrawl.logic.MovementService;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -24,12 +32,19 @@ import java.sql.SQLException;
 
 public class Main extends Application {
     GameMap map = MapLoader.loadMap();
+public class Main extends Application {
+    GameMap map = MapLoader.loadMap();
+    MovementService movementService = new MovementService();
     Canvas canvas = new Canvas(
             map.getWidth() * Tiles.TILE_WIDTH,
             map.getHeight() * Tiles.TILE_WIDTH);
     GraphicsContext context = canvas.getGraphicsContext2D();
     Label healthLabel = new Label();
     GameDatabaseManager dbManager;
+    Label playerInventory = new Label();
+    PlayerInventory inventory = new PlayerInventory();
+    InventoryService inventoryService = new InventoryService(inventory);
+    GridPane ui = new GridPane();
 
     public static void main(String[] args) {
         launch(args);
@@ -37,6 +52,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        ui.setPrefWidth(200);
+        ui.setPadding(new Insets(50));
         setupDbManager();
         GridPane ui = new GridPane();
         ui.setPrefWidth(200);
@@ -44,6 +61,9 @@ public class Main extends Application {
 
         ui.add(new Label("Health: "), 0, 0);
         ui.add(healthLabel, 1, 0);
+
+        ui.add(new Label("Inventory: "), 0, 1);
+        //ui.add(playerInventory, 0, 2);
 
         BorderPane borderPane = new BorderPane();
 
@@ -91,10 +111,40 @@ public class Main extends Application {
             case S:
                 Player player = map.getPlayer();
                 dbManager.savePlayer(player);
+    private void onKeyPressed(KeyEvent keyEvent) {
+        switch (keyEvent.getCode()) {
+            //pick up item on key pressed F
+            case UP:
+                Player player = map.getPlayer();
+                movementService.move(player, inventoryService, 0, -1);
+                refresh();
+                break;
+            case DOWN:
+                player = map.getPlayer();
+                movementService.move(player, inventoryService, 0, 1);
+                refresh();
+                break;
+            case LEFT:
+                player = map.getPlayer();
+                movementService.move(player, inventoryService, -1 , 0);
+                refresh();
+                break;
+            case RIGHT:
+                player = map.getPlayer();
+                movementService.move(player, inventoryService,1, 0);
+                refresh();
+                break;
+            case F:
+                player = map.getPlayer();
+                Cell playerCell = (map.getCell(player.getX(), player.getY()));
+                Item item = playerCell.getItem();
+                inventoryService.pickUpItem(item);
+                refresh();
                 break;
         }
     }
 
+    //ui
     private void refresh() {
         context.setFill(Color.BLACK);
         context.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
@@ -103,12 +153,26 @@ public class Main extends Application {
                 Cell cell = map.getCell(x, y);
                 if (cell.getActor() != null) {
                     Tiles.drawTile(context, cell.getActor(), x, y);
+                } else if (cell.getItem() != null) {
+                    if (!cell.getItem().isPickedUp()) {
+                        Tiles.drawTile(context, cell.getItem(), x, y);
+                    } else {
+                        Tiles.drawTile(context, cell, x, y);
+                    }
                 } else {
                     Tiles.drawTile(context, cell, x, y);
                 }
             }
         }
         healthLabel.setText("" + map.getPlayer().getHealth());
+        for (int i = 0; i < inventory.playerInventory.size(); i++) {
+            Item itemName = inventory.playerInventory.get(i);
+            Label label = new Label();
+            label.setText(itemName.getTileName());
+            ui.add(label, 0, i + 2);
+            }
+        }
+    }
     }
 
     private void setupDbManager() {
