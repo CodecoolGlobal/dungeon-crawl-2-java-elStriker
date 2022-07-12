@@ -4,7 +4,7 @@ import com.codecool.dungeoncrawl.dao.GameDatabaseManager;
 import com.codecool.dungeoncrawl.data.Cell;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.MapLoader;
-import com.codecool.dungeoncrawl.data.actors.Player;
+import com.codecool.dungeoncrawl.data.actors.*;
 import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.data.items.Item;

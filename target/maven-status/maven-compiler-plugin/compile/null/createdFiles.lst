@@ -1,5 +1,5 @@
-com/codecool/dungeoncrawl/data/Cell.class
 com/codecool/dungeoncrawl/model/BaseModel.class
+com/codecool/dungeoncrawl/data/Cell.class
 com/codecool/dungeoncrawl/logic/RestrictMovement.class
 com/codecool/dungeoncrawl/model/GameState.class
 com/codecool/dungeoncrawl/dao/PlayerDaoJdbc.class
@@ -9,14 +9,16 @@ com/codecool/dungeoncrawl/data/PlayerInventory.class
 com/codecool/dungeoncrawl/data/actors/Actor.class
 com/codecool/dungeoncrawl/data/CellType.class
 com/codecool/dungeoncrawl/logic/MovementService.class
-com/codecool/dungeoncrawl/logic/InventoryService.class
 com/codecool/dungeoncrawl/dao/GameStateDaoJdbc.class
-com/codecool/dungeoncrawl/data/items/Key.class
-com/codecool/dungeoncrawl/data/items/Item.class
+com/codecool/dungeoncrawl/logic/InventoryService.class
+com/codecool/dungeoncrawl/data/actors/Ghost.class
 com/codecool/dungeoncrawl/logic/CombatService.class
+com/codecool/dungeoncrawl/data/actors/Guardian.class
+com/codecool/dungeoncrawl/data/items/Item.class
+com/codecool/dungeoncrawl/data/items/Key.class
 com/codecool/dungeoncrawl/data/items/Sword.class
 com/codecool/dungeoncrawl/model/PlayerModel.class
 com/codecool/dungeoncrawl/dao/PlayerDao.class
 com/codecool/dungeoncrawl/data/actors/Skeleton.class
-com/codecool/dungeoncrawl/data/items/Pickaxe.class
 com/codecool/dungeoncrawl/dao/GameDatabaseManager.class
+com/codecool/dungeoncrawl/data/items/Pickaxe.class
