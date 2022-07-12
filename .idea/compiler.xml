@@ -9,5 +9,8 @@
         <module name="dungeon-crawl" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dungeon-crawl-2-java-elStriker" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -11,7 +11,8 @@ public enum CellType {
 
     PICKAXE("pickaxe"),
 
-    KEY("key");
+    KEY("key"),
+    GHOST("ghost");
 
     private final String tileName;
 
