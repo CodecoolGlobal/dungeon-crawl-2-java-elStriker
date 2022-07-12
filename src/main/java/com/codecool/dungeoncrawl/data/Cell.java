@@ -5,7 +5,7 @@ import com.codecool.dungeoncrawl.data.items.Item;
 import com.codecool.dungeoncrawl.logic.Drawable;
 import com.codecool.dungeoncrawl.logic.GameMap;
 
-public class Cell implements Drawable {
+public class Cell  implements Drawable {
     private CellType type;
     private Actor actor;
     private Item item;

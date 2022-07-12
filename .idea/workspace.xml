@@ -5,58 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="060b18be-fc45-40e1-87d7-cd27eb9effff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/CellType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/PlayerInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/actors/Skeleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Pickaxe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/items/Sword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/CombatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/InventoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/RestrictMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles$Tile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/Cell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/CellType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/PlayerInventory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Actor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Player.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/actors/Skeleton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Item.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Key.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Pickaxe.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/items/Sword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/CombatService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/Drawable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/GameMap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/InventoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MapLoader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/RestrictMovement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tiles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/ActorTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/CellTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/dao/GameDatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/dao/GameDatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/Cell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/CellType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/ActorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/ActorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/dungeoncrawl/logic/CellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/actors/Actor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/actors/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/actors/Skeleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/model/PlayerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/model/PlayerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

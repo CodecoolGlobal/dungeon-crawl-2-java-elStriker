@@ -7,8 +7,6 @@ import com.codecool.dungeoncrawl.data.actors.Skeleton;
 import com.codecool.dungeoncrawl.data.items.Key;
 import com.codecool.dungeoncrawl.data.items.Pickaxe;
 import com.codecool.dungeoncrawl.data.items.Sword;
-import com.codecool.dungeoncrawl.logic.actors.Player;
-import com.codecool.dungeoncrawl.logic.actors.Skeleton;
 
 import java.io.InputStream;
 import java.util.Scanner;

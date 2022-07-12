@@ -1,16 +1,12 @@
 package com.codecool.dungeoncrawl;
 
 import com.codecool.dungeoncrawl.dao.GameDatabaseManager;
-import com.codecool.dungeoncrawl.logic.Cell;
-import com.codecool.dungeoncrawl.logic.GameMap;
-import com.codecool.dungeoncrawl.logic.MapLoader;
-import com.codecool.dungeoncrawl.logic.actors.Player;
-import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.data.Cell;
 import com.codecool.dungeoncrawl.logic.GameMap;
-import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.Player;
+import com.codecool.dungeoncrawl.data.PlayerInventory;
+import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.data.items.Item;
 import com.codecool.dungeoncrawl.logic.MovementService;
 import javafx.application.Application;
@@ -30,8 +26,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
-public class Main extends Application {
-    GameMap map = MapLoader.loadMap();
+import static com.sun.javafx.application.PlatformImpl.exit;
+import static java.time.zone.ZoneRulesProvider.refresh;
+
 public class Main extends Application {
     GameMap map = MapLoader.loadMap();
     MovementService movementService = new MovementService();
@@ -54,10 +51,6 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         ui.setPrefWidth(200);
         ui.setPadding(new Insets(50));
-        setupDbManager();
-        GridPane ui = new GridPane();
-        ui.setPrefWidth(200);
-        ui.setPadding(new Insets(10));
 
         ui.add(new Label("Health: "), 0, 0);
         ui.add(healthLabel, 1, 0);
@@ -74,7 +67,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         refresh();
         scene.setOnKeyPressed(this::onKeyPressed);
-        scene.setOnKeyReleased(this::onKeyReleased);
 
         primaryStage.setTitle("Dungeon Crawl");
         primaryStage.show();
@@ -90,27 +82,6 @@ public class Main extends Application {
         }
     }
 
-    private void onKeyPressed(KeyEvent keyEvent) {
-        switch (keyEvent.getCode()) {
-            case UP:
-                map.getPlayer().move(0, -1);
-                refresh();
-                break;
-            case DOWN:
-                map.getPlayer().move(0, 1);
-                refresh();
-                break;
-            case LEFT:
-                map.getPlayer().move(-1, 0);
-                refresh();
-                break;
-            case RIGHT:
-                map.getPlayer().move(1, 0);
-                refresh();
-                break;
-            case S:
-                Player player = map.getPlayer();
-                dbManager.savePlayer(player);
     private void onKeyPressed(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
             //pick up item on key pressed F
@@ -173,7 +144,7 @@ public class Main extends Application {
             }
         }
     }
-    }
+    /*}
 
     private void setupDbManager() {
         dbManager = new GameDatabaseManager();
@@ -192,4 +163,5 @@ public class Main extends Application {
         }
         System.exit(0);
     }
-}
+    }*/
+
