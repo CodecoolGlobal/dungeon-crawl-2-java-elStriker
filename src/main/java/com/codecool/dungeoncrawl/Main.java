@@ -9,6 +9,7 @@ import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.data.items.Item;
 import com.codecool.dungeoncrawl.logic.MovementService;
+import com.codecool.dungeoncrawl.util.RNG;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -87,22 +88,30 @@ public class Main extends Application {
             //pick up item on key pressed F
             case UP:
                 Player player = map.getPlayer();
+                Ghost ghost = map.getGhost();
                 movementService.move(player, inventoryService, 0, -1);
+                movementService.moveEnemy(ghost);
                 refresh();
                 break;
             case DOWN:
                 player = map.getPlayer();
+                ghost = map.getGhost();
                 movementService.move(player, inventoryService, 0, 1);
+                movementService.moveEnemy(ghost);
                 refresh();
                 break;
             case LEFT:
                 player = map.getPlayer();
+                ghost = map.getGhost();
                 movementService.move(player, inventoryService, -1 , 0);
+                movementService.moveEnemy(ghost);
                 refresh();
                 break;
             case RIGHT:
                 player = map.getPlayer();
+                ghost = map.getGhost();
                 movementService.move(player, inventoryService,1, 0);
+                movementService.moveEnemy(ghost);
                 refresh();
                 break;
             case F:
