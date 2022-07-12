@@ -23,4 +23,9 @@ public class MovementService {
             }
         }
     }
+
+    public void moveEnemy(Actor actor) {
+        Cell cell = actor.getCell();
+
+    }
 }
