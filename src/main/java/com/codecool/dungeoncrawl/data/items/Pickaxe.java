@@ -1,6 +1,7 @@
 package com.codecool.dungeoncrawl.data.items;
 
 import com.codecool.dungeoncrawl.data.Cell;
+import com.codecool.dungeoncrawl.logic.InventoryService;
 
 public class Pickaxe extends Item {
     public Pickaxe(Cell cell) {
@@ -10,5 +11,10 @@ public class Pickaxe extends Item {
     @Override
     public String getTileName() {
         return "pickaxe";
+    }
+
+    @Override
+    public void pickUp(InventoryService inventoryService) {
+        inventoryService.pickUpPickaxe(this);
     }
 }

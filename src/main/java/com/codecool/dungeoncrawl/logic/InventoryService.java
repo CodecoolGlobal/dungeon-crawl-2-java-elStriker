@@ -1,10 +1,9 @@
 package com.codecool.dungeoncrawl.logic;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
-import com.codecool.dungeoncrawl.data.items.Item;
-import com.codecool.dungeoncrawl.data.items.Key;
-import com.codecool.dungeoncrawl.data.items.Pickaxe;
-import com.codecool.dungeoncrawl.data.items.Sword;
+import com.codecool.dungeoncrawl.data.items.*;
+
+import java.util.Map;
 
 public class InventoryService {
     PlayerInventory playerInventory;
@@ -12,14 +11,15 @@ public class InventoryService {
     boolean hasSword = false;
     boolean hasPickaxe = false;
 
+    //Map<ItemType, Integer> inventory;
+
     public InventoryService(PlayerInventory inventory) {
         this.playerInventory = inventory;
+        updateItems();
     }
 
-    public void pickUpItem(Item item) {
-        if (!item.isPickedUp()){
-            playerInventory.playerInventory.add(item);
-            item.setPickedUp(true);
+    private void updateItems() {
+        for (Item item : playerInventory.playerInventory) {
 
             if (item instanceof Key) {
                 hasKey = true;
@@ -33,6 +33,33 @@ public class InventoryService {
                 hasPickaxe = true;
             }
         }
+    }
+
+    public void pickUpItem(Item item) {
+        item.pickUp(this);
+    }
+
+    public void pickUpGenericItem(Item item) {
+        if (!item.isPickedUp()){
+            playerInventory.playerInventory.add(item);
+            item.setPickedUp(true);
+            updateItems();
+        }
+    }
+
+    public void pickUpKey(Key key) {
+        pickUpGenericItem(key);
+        this.hasKey = true;
+    }
+
+    public void pickUpSword(Sword sword) {
+        pickUpGenericItem(sword);
+        this.hasSword = true;
+    }
+
+    public void pickUpPickaxe(Pickaxe pickaxe){
+        pickUpGenericItem(pickaxe);
+        this.hasPickaxe = true;
     }
 
     public boolean hasPickaxe(){

@@ -26,7 +26,8 @@ public class MapLoader {
             for (int x = 0; x < width; x++) {
                 if (x < line.length()) {
                     Cell cell = map.getCell(x, y);
-                    switch (line.charAt(x)) {
+                    char character = line.charAt(x);
+                    switch (character) {
                         case ' ':
                             cell.setType(CellType.EMPTY);
                             break;
@@ -37,11 +38,14 @@ public class MapLoader {
                             cell.setType(CellType.FLOOR);
                             break;
                         case 's':
+                        case 'x':
+                        case 'ä':
                             cell.setType(CellType.FLOOR);
-                            new Skeleton(cell);
+                            EnemyService.createSkeleton(cell, character);
                             break;
                         case '@':
                             cell.setType(CellType.FLOOR);
+
                             map.setPlayer(new Player(cell));
                             break;
                         case 'b':

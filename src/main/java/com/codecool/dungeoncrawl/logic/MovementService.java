@@ -18,10 +18,8 @@ public class MovementService {
         } else {
             if (nextCell.getActor() != null) {
                 combatService.exchangeBlows(player, nextCell.getActor());
-            } else if (nextCell.getType() == CellType.ClOSEDDOOR) {
-                if (inventory.hasKey()) {
+            } else if (nextCell.getType() == CellType.ClOSEDDOOR && inventory.hasKey()) {
                     nextCell.setType(CellType.OPENDOOR);
-                }
             }
         }
     }

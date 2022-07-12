@@ -6,9 +6,12 @@ com/codecool/dungeoncrawl/dao/PlayerDaoJdbc.class
 com/codecool/dungeoncrawl/dao/GameStateDao.class
 com/codecool/dungeoncrawl/data/actors/Player.class
 com/codecool/dungeoncrawl/data/PlayerInventory.class
+com/codecool/dungeoncrawl/data/items/ItemType.class
 com/codecool/dungeoncrawl/data/actors/Actor.class
 com/codecool/dungeoncrawl/data/CellType.class
 com/codecool/dungeoncrawl/logic/MovementService.class
+com/codecool/dungeoncrawl/logic/EnemyService.class
+com/codecool/dungeoncrawl/data/Drawable.class
 com/codecool/dungeoncrawl/logic/InventoryService.class
 com/codecool/dungeoncrawl/dao/GameStateDaoJdbc.class
 com/codecool/dungeoncrawl/data/items/Key.class
