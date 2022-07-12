@@ -49,14 +49,6 @@ public class MapLoader {
 
                             map.setPlayer(new Player(cell));
                             break;
-                        case 'b':
-                            cell.setType(CellType.FLOOR);
-                            new Pickaxe(cell);
-                            break;
-                        case 'l':
-                            cell.setType(CellType.FLOOR);
-                            new Sword(cell);
-                            break;
                         case 'k':
                             cell.setType(CellType.FLOOR);
                             new Key(cell);
