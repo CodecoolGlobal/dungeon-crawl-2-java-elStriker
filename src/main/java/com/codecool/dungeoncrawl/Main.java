@@ -39,7 +39,7 @@ public class Main extends Application {
     GraphicsContext context = canvas.getGraphicsContext2D();
     Label healthLabel = new Label();
     GameDatabaseManager dbManager;
-    Label playerInventory = new Label();
+    Label playerStrength = new Label();
     PlayerInventory inventory = new PlayerInventory();
     InventoryService inventoryService = new InventoryService(inventory);
     GridPane ui = new GridPane();
@@ -56,8 +56,8 @@ public class Main extends Application {
         ui.add(new Label("Health: "), 0, 0);
         ui.add(healthLabel, 1, 0);
 
-        ui.add(new Label("Inventory: "), 0, 1);
-        //ui.add(playerInventory, 0, 2);
+        ui.add(new Label("Strength: "), 0, 1);
+        ui.add(playerStrength, 1, 1);
 
         BorderPane borderPane = new BorderPane();
 
@@ -118,7 +118,7 @@ public class Main extends Application {
                 player = map.getPlayer();
                 Cell playerCell = (map.getCell(player.getX(), player.getY()));
                 Item item = playerCell.getItem();
-                inventoryService.pickUpItem(item);
+                inventoryService.pickUpItem(player ,item);
                 refresh();
                 break;
         }
@@ -145,11 +145,12 @@ public class Main extends Application {
             }
         }
         healthLabel.setText("" + map.getPlayer().getHealth());
+        playerStrength.setText("" + map.getPlayer().getStrength());
         for (int i = 0; i < inventory.playerInventory.size(); i++) {
             Item itemName = inventory.playerInventory.get(i);
-            Label label = new Label();
-            label.setText(itemName.getTileName());
-            ui.add(label, 0, i + 2);
+            Label playerInventory = new Label();
+            playerInventory.setText(itemName.getTileName());
+            ui.add(playerInventory, 0, i + 3);
             }
         }
     }

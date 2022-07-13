@@ -28,10 +28,9 @@ public class CombatService {
         Cell cell;
         if (actor instanceof Skeleton){
             cell = actor.getCell();
-            if (((Skeleton) actor).getSkeletonName() == 'x'){
+            if (((Skeleton) actor).getSkeletonName() == 's'){
                 new Pickaxe(cell);
-            } else if (((Skeleton) actor).getSkeletonName() == 's') {
-                System.out.println("I am S!");
+            } else if (((Skeleton) actor).getSkeletonName() == 'x') {
                 new Sword(cell);
             }
         }

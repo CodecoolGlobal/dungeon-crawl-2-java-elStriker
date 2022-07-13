@@ -1,6 +1,7 @@
 package com.codecool.dungeoncrawl.logic;
 
 import com.codecool.dungeoncrawl.data.PlayerInventory;
+import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.items.*;
 
 import java.util.Map;
@@ -35,8 +36,9 @@ public class InventoryService {
         }
     }
 
-    public void pickUpItem(Item item) {
+    public void pickUpItem(Player player, Item item) {
         item.pickUp(this);
+        player.setStrength(player.getStrength() + item.getStrength());
     }
 
     public void pickUpGenericItem(Item item) {
