@@ -58,6 +58,7 @@ public class MapLoader {
                             break;
                         case 'g':
                             map.setGhost(new Ghost(cell));
+                            map.setGhostCount(map.getGhostCount() + 1);
                             break;
                         case 'r':
                             cell.setType(CellType.RIVER);

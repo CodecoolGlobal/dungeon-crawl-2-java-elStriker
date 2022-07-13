@@ -12,6 +12,7 @@ public class GameMap {
 
     private Player player;
     private Ghost ghost;
+    private int ghostCount = 0;
 
     public GameMap(int width, int height, CellType defaultCellType) {
         this.width = width;
@@ -50,5 +51,13 @@ public class GameMap {
 
     public Ghost getGhost() {
         return ghost;
+    }
+
+    public int getGhostCount() {
+        return ghostCount;
+    }
+
+    public void setGhostCount(int ghostCount) {
+        this.ghostCount = ghostCount;
     }
 }

@@ -88,30 +88,26 @@ public class Main extends Application {
             //pick up item on key pressed F
             case UP:
                 Player player = map.getPlayer();
-                Ghost ghost = map.getGhost();
                 movementService.move(player, inventoryService, 0, -1);
-                movementService.moveEnemy(ghost);
+                moveGhost();
                 refresh();
                 break;
             case DOWN:
                 player = map.getPlayer();
-                ghost = map.getGhost();
                 movementService.move(player, inventoryService, 0, 1);
-                movementService.moveEnemy(ghost);
+                moveGhost();
                 refresh();
                 break;
             case LEFT:
                 player = map.getPlayer();
-                ghost = map.getGhost();
                 movementService.move(player, inventoryService, -1 , 0);
-                movementService.moveEnemy(ghost);
+                moveGhost();
                 refresh();
                 break;
             case RIGHT:
                 player = map.getPlayer();
-                ghost = map.getGhost();
                 movementService.move(player, inventoryService,1, 0);
-                movementService.moveEnemy(ghost);
+                moveGhost();
                 refresh();
                 break;
             case F:
@@ -153,7 +149,13 @@ public class Main extends Application {
             ui.add(playerInventory, 0, i + 3);
             }
         }
-    }
+        private void moveGhost() {
+            if (map.getGhostCount() > 0) {
+                Ghost ghost = map.getGhost();
+                movementService.moveEnemy(ghost);
+            }
+        }
+     }
     /*}
 
     private void setupDbManager() {
