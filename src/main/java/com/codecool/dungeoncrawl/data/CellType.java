@@ -12,7 +12,13 @@ public enum CellType {
     PICKAXE("pickaxe"),
 
     KEY("key"),
-    GHOST("ghost");
+    GHOST("ghost"),
+    RIVER("river"),
+    ROCK("rock"),
+    FIRE("fire"),
+    BRIDGE("bridge"),
+    TREE("tree"),
+    CACTUS("cactus");
 
     private final String tileName;
 
