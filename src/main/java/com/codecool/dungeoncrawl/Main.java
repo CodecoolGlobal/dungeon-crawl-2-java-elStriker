@@ -12,6 +12,7 @@ import com.codecool.dungeoncrawl.logic.MovementService;
 import com.codecool.dungeoncrawl.util.RNG;
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -58,6 +59,8 @@ public class Main extends Application {
 
         ui.add(new Label("Strength: "), 0, 1);
         ui.add(playerStrength, 1, 1);
+
+        ui.setAlignment(Pos.BASELINE_RIGHT);
 
         BorderPane borderPane = new BorderPane();
 
