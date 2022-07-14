@@ -5,6 +5,7 @@ com/codecool/dungeoncrawl/model/GameState.class
 com/codecool/dungeoncrawl/dao/PlayerDaoJdbc.class
 com/codecool/dungeoncrawl/dao/GameStateDao.class
 com/codecool/dungeoncrawl/data/actors/Player.class
+com/codecool/dungeoncrawl/data/GameInformation.class
 com/codecool/dungeoncrawl/data/PlayerInventory.class
 com/codecool/dungeoncrawl/data/items/ItemType.class
 com/codecool/dungeoncrawl/data/actors/Actor.class

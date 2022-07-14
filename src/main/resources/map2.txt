@@ -3,22 +3,22 @@
 #....@..........bbb....................#
 #...............bbb....................#
 #..fffffffffffffrrrffffffffffffffffff..#
-#..f            rrr                 f..#
-#..f  w         rrr    t        w   f..#
+#..f            rrr        g        f..#
+#..f  w      g  rrr    t        w   f..#
 #..f     t      rrr                 f..#
-#..f            rrr    w        c   f..#
+#..f       g    rrr    w        c   f..#
 #..f            rrr                 f..#
-#..f       w    rrr         t       f..#
+#..f       w    rrr    g    t       f..#
 #..f            rrr                 f..#
-#..f            rrr     w           f..#
-#..f    c       rrr                 f..#
+#..f            rrr     w    g      f..#
+#..f    c       rrr   g             f..#
 #..f            rrr       w    t    f..#
 #..f            rrr                 f..#
-#..f     t      rrr     t           f..#
-#..f            rrr              c  f..#
+#..f     t      rrr g   t   g       f..#
+#..f  g         rrr              c  f..#
 #..f            rrr       w         f..#
 #..f     c      rrr                 f..#
-#..f            rrr          t      f..#
+#..f            rrr     g    t      f..#
 #..fffffffffffffrrrffffffffffffffffff..#
 #...............bbb....................#
 #...............bbb....................#

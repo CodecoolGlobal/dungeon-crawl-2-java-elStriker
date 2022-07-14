@@ -3,6 +3,7 @@ package com.codecool.dungeoncrawl;
 import com.codecool.dungeoncrawl.dao.GameDatabaseManager;
 import com.codecool.dungeoncrawl.data.Cell;
 import com.codecool.dungeoncrawl.data.CellType;
+import com.codecool.dungeoncrawl.data.GameInformation;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.*;
@@ -29,6 +30,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import static com.sun.javafx.application.PlatformImpl.exit;
 import static java.time.zone.ZoneRulesProvider.refresh;
@@ -48,6 +50,7 @@ public class Main extends Application {
     InventoryService inventoryService = new InventoryService(inventory);
     GridPane ui = new GridPane();
     BorderPane borderPane = new BorderPane();
+    Scene scene;
 
     public static void main(String[] args) {
         launch(args);
@@ -67,7 +70,8 @@ public class Main extends Application {
         borderPane.setCenter(canvas);
         borderPane.setRight(ui);
 
-        Scene scene = new Scene(borderPane);
+        scene = new Scene(borderPane);
+        GameInformation gameInformation = new GameInformation(primaryStage, scene);
         primaryStage.setScene(scene);
         refresh();
         scene.setOnKeyPressed(this::onKeyPressed);
@@ -130,23 +134,24 @@ public class Main extends Application {
     private void changeLevel(Player player) {
         if (player.getCell().getType() == CellType.OPENDOOR) {
             level++;
-            MapLoader.loadMap(level);
+            map = MapLoader.loadMap(level);
             canvas = new Canvas(
                     Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
                     Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
             context = canvas.getGraphicsContext2D();
-            refresh();
-            /*borderPane.setCenter(canvas);
-            borderPane.setRight(ui);
 
-            Scene scene = new Scene(borderPane);
-            primaryStage.setScene(scene);
+            borderPane = new BorderPane();
+            borderPane.setCenter(canvas);
+            borderPane.setRight(ui);
+            scene = new Scene(borderPane);
+            refresh();
+
+            GameInformation.primaryStage.setScene(scene);
             refresh();
             scene.setOnKeyPressed(this::onKeyPressed);
 
-            primaryStage.setTitle("Dungeon Crawl");
-            primaryStage.show();*/
-
+            GameInformation.primaryStage.setTitle("Dungeon Crawl");
+            GameInformation.primaryStage.show();
         }
     }
 
@@ -191,8 +196,8 @@ public class Main extends Application {
         }
         private void moveGhost() {
             if (map.getGhostCount() > 0) {
-                for (int i = 0; i < map.getGhostCount(); i++) {
-                    Ghost ghost = map.getGhost();
+                for (int i = 0; i < map.getGhostCount(); i++){
+                    Ghost ghost = GameMap.ghosts.get(i);
                     movementService.moveEnemy(ghost, map);
                 }
             }

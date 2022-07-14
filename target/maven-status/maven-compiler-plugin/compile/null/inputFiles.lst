@@ -27,6 +27,7 @@
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/data/actors/Ghost.java
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/data/items/Key.java
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/data/PlayerInventory.java
+/Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/data/GameInformation.java
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/dao/GameDatabaseManager.java
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java
 /Users/roby/Desktop/Programming/Projects/Java/dungeon-crawl-2-java-elStriker/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java

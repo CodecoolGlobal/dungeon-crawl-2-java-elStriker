@@ -5,6 +5,8 @@ import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.data.actors.Ghost;
 import com.codecool.dungeoncrawl.data.actors.Player;
 
+import java.util.ArrayList;
+
 public class GameMap {
     private int width;
     private int height;
@@ -13,6 +15,7 @@ public class GameMap {
     private Player player;
     private Ghost ghost;
     private int ghostCount = 0;
+    public static ArrayList<Ghost> ghosts = new ArrayList<>();
 
     public GameMap(int width, int height, CellType defaultCellType) {
         this.width = width;
