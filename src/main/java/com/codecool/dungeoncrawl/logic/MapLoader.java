@@ -10,11 +10,15 @@ import com.codecool.dungeoncrawl.data.items.Pickaxe;
 import com.codecool.dungeoncrawl.data.items.Sword;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MapLoader {
-    public static GameMap loadMap() {
-        InputStream is = MapLoader.class.getResourceAsStream("/map.txt");
+    private int level;
+    static ArrayList<Ghost> ghosts = new ArrayList<>();
+    public static GameMap loadMap(int level) {
+        InputStream is = MapLoader.class.getResourceAsStream("/map" + level + ".txt");
+        //System.out.println("/map" + level + ".txt");
         Scanner scanner = new Scanner(is);
         int width = scanner.nextInt();
         int height = scanner.nextInt();
@@ -22,6 +26,7 @@ public class MapLoader {
         scanner.nextLine(); // empty line
 
         GameMap map = new GameMap(width, height, CellType.EMPTY);
+        System.out.println(map.getWidth());
         for (int y = 0; y < height; y++) {
             String line = scanner.nextLine();
             for (int x = 0; x < width; x++) {
@@ -57,7 +62,9 @@ public class MapLoader {
                             cell.setType(CellType.ClOSEDDOOR);
                             break;
                         case 'g':
-                            map.setGhost(new Ghost(cell));
+                            Ghost ghost = new Ghost(cell);
+                            map.setGhost(ghost);
+                            ghosts.add(ghost);
                             map.setGhostCount(map.getGhostCount() + 1);
                             break;
                         case 'r':

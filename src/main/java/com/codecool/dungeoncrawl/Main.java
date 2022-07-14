@@ -2,6 +2,7 @@ package com.codecool.dungeoncrawl;
 
 import com.codecool.dungeoncrawl.dao.GameDatabaseManager;
 import com.codecool.dungeoncrawl.data.Cell;
+import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.logic.GameMap;
 import com.codecool.dungeoncrawl.logic.MapLoader;
 import com.codecool.dungeoncrawl.data.actors.*;
@@ -13,6 +14,7 @@ import com.codecool.dungeoncrawl.util.RNG;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -32,7 +34,8 @@ import static com.sun.javafx.application.PlatformImpl.exit;
 import static java.time.zone.ZoneRulesProvider.refresh;
 
 public class Main extends Application {
-    GameMap map = MapLoader.loadMap();
+    private int level = 1;
+    GameMap map = MapLoader.loadMap(level);
     MovementService movementService = new MovementService();
     Canvas canvas = new Canvas(
             Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
@@ -44,6 +47,7 @@ public class Main extends Application {
     PlayerInventory inventory = new PlayerInventory();
     InventoryService inventoryService = new InventoryService(inventory);
     GridPane ui = new GridPane();
+    BorderPane borderPane = new BorderPane();
 
     public static void main(String[] args) {
         launch(args);
@@ -59,8 +63,6 @@ public class Main extends Application {
 
         ui.add(new Label("Strength: "), 0, 1);
         ui.add(playerStrength, 1, 1);
-
-        BorderPane borderPane = new BorderPane();
 
         borderPane.setCenter(canvas);
         borderPane.setRight(ui);
@@ -91,24 +93,28 @@ public class Main extends Application {
                 Player player = map.getPlayer();
                 movementService.move(player, inventoryService, 0, -1);
                 moveGhost();
+                changeLevel(player);
                 refresh();
                 break;
             case DOWN:
                 player = map.getPlayer();
                 movementService.move(player, inventoryService, 0, 1);
                 moveGhost();
+                changeLevel(player);
                 refresh();
                 break;
             case LEFT:
                 player = map.getPlayer();
                 movementService.move(player, inventoryService, -1 , 0);
                 moveGhost();
+                changeLevel(player);
                 refresh();
                 break;
             case RIGHT:
                 player = map.getPlayer();
                 movementService.move(player, inventoryService,1, 0);
                 moveGhost();
+                changeLevel(player);
                 refresh();
                 break;
             case F:
@@ -118,6 +124,29 @@ public class Main extends Application {
                 inventoryService.pickUpItem(player ,item);
                 refresh();
                 break;
+        }
+    }
+
+    private void changeLevel(Player player) {
+        if (player.getCell().getType() == CellType.OPENDOOR) {
+            level++;
+            MapLoader.loadMap(level);
+            canvas = new Canvas(
+                    Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
+                    Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
+            context = canvas.getGraphicsContext2D();
+            refresh();
+            /*borderPane.setCenter(canvas);
+            borderPane.setRight(ui);
+
+            Scene scene = new Scene(borderPane);
+            primaryStage.setScene(scene);
+            refresh();
+            scene.setOnKeyPressed(this::onKeyPressed);
+
+            primaryStage.setTitle("Dungeon Crawl");
+            primaryStage.show();*/
+
         }
     }
 
@@ -162,8 +191,10 @@ public class Main extends Application {
         }
         private void moveGhost() {
             if (map.getGhostCount() > 0) {
-                Ghost ghost = map.getGhost();
-                movementService.moveEnemy(ghost, map);
+                for (int i = 0; i < map.getGhostCount(); i++) {
+                    Ghost ghost = map.getGhost();
+                    movementService.moveEnemy(ghost, map);
+                }
             }
         }
      }
