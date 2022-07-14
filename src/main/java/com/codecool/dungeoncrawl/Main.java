@@ -11,11 +11,8 @@ import com.codecool.dungeoncrawl.data.PlayerInventory;
 import com.codecool.dungeoncrawl.logic.InventoryService;
 import com.codecool.dungeoncrawl.data.items.Item;
 import com.codecool.dungeoncrawl.logic.MovementService;
-import com.codecool.dungeoncrawl.util.RNG;
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -30,10 +27,8 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import static com.sun.javafx.application.PlatformImpl.exit;
-import static java.time.zone.ZoneRulesProvider.refresh;
 
 public class Main extends Application {
     private int level = 1;
@@ -128,6 +123,18 @@ public class Main extends Application {
                 inventoryService.pickUpItem(player ,item);
                 refresh();
                 break;
+            case J:
+                player = map.getPlayer();
+                Cell cell = player.getCell();
+                Cell nextDown = cell.getNeighbor(0, 1);
+                Cell nextUp = cell.getNeighbor(0, -1);
+                if (nextDown.getType() == CellType.BLOCK && inventoryService.hasPickaxe()){
+                    nextDown.setType(CellType.FLOOR);
+                } else if (nextUp.getType() == CellType.BLOCK && inventoryService.hasPickaxe()) {
+                    nextUp.setType(CellType.FLOOR);
+                }
+                refresh();
+                break;
         }
     }
 
@@ -152,7 +159,28 @@ public class Main extends Application {
 
             GameInformation.primaryStage.setTitle("Dungeon Crawl");
             GameInformation.primaryStage.show();
+        } else if (player.getCell().getType() == CellType.BACKDOOR) {
+            level--;
+            map = MapLoader.loadMap(level);
+            canvas = new Canvas(
+                    Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
+                    Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
+            context = canvas.getGraphicsContext2D();
+
+            borderPane = new BorderPane();
+            borderPane.setCenter(canvas);
+            borderPane.setRight(ui);
+            scene = new Scene(borderPane);
+            refresh();
+
+            GameInformation.primaryStage.setScene(scene);
+            refresh();
+            scene.setOnKeyPressed(this::onKeyPressed);
+
+            GameInformation.primaryStage.setTitle("Dungeon Crawl");
+            GameInformation.primaryStage.show();
         }
+
     }
 
     //ui

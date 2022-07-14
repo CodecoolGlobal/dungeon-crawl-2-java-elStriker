@@ -13,6 +13,7 @@ public class RestrictMovement {
                 (nextCell.getTileName().equals("river")) ||
                 (nextCell.getTileName().equals("rock")) ||
                 (nextCell.getTileName().equals("cactus")) ||
-                (nextCell.getTileName().equals("tree")));
+                (nextCell.getTileName().equals("tree")) ||
+                (nextCell.getTileName().equals("block")));
     }
 }

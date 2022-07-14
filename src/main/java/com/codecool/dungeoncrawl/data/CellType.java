@@ -18,7 +18,9 @@ public enum CellType {
     FIRE("fire"),
     BRIDGE("bridge"),
     TREE("tree"),
-    CACTUS("cactus");
+    BLOCK("block"),
+    CACTUS("cactus"),
+    BACKDOOR("backdoor");
 
     private final String tileName;
 

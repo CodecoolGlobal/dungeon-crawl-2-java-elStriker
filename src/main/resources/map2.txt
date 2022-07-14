@@ -1,5 +1,5 @@
 40 24
-################rrr#####################
+#####o##########rrr#####################
 #....@..........bbb....................#
 #...............bbb....................#
 #..fffffffffffffrrrffffffffffffffffff..#
@@ -14,9 +14,9 @@
 #..f    c       rrr   g             f..#
 #..f            rrr       w    t    f..#
 #..f            rrr                 f..#
-#..f     t      rrr g   t   g       f..#
-#..f  g         rrr              c  f..#
-#..f            rrr       w         f..#
+#..f     t      rrr g   t   g       füü#
+#..f  g         rrr              c  f..d
+#..f            rrr       w         füü#
 #..f     c      rrr                 f..#
 #..f            rrr     g    t      f..#
 #..fffffffffffffrrrffffffffffffffffff..#
