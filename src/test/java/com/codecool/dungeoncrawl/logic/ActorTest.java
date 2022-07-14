@@ -2,6 +2,7 @@ package com.codecool.dungeoncrawl.logic;
 
 import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.data.PlayerInventory;
+import com.codecool.dungeoncrawl.data.actors.Ghost;
 import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.data.actors.Skeleton;
 import org.junit.jupiter.api.Test;
@@ -37,7 +38,7 @@ class ActorTest {
 
     @Test
     void cannotMoveOutOfMap() {
-        Player player = new Player(gameMap.getCell(2, 1));
+        Ghost player = new Ghost(gameMap.getCell(2, 1));
         movementService.move(player, inventoryService, 1, 0);
 
         assertEquals(2, player.getX());

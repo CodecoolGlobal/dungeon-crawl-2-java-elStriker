@@ -89,7 +89,6 @@ public class Main extends Application {
             //pick up item on key pressed F
             case UP:
                 Player player = map.getPlayer();
-                System.out.println(player.getX() + "," + player.getY());
                 movementService.move(player, inventoryService, 0, -1);
                 moveGhost();
                 refresh();
@@ -164,7 +163,7 @@ public class Main extends Application {
         private void moveGhost() {
             if (map.getGhostCount() > 0) {
                 Ghost ghost = map.getGhost();
-                movementService.moveEnemy(ghost);
+                movementService.moveEnemy(ghost, map);
             }
         }
      }

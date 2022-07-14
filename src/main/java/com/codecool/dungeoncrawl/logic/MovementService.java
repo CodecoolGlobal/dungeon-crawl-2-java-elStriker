@@ -27,42 +27,32 @@ public class MovementService {
         }
     }
 
-    public void moveEnemy(Actor actor) {
+    public void moveEnemy(Actor actor, GameMap map) {
         Cell cell = actor.getCell();
         if (actor instanceof Ghost) {
             if (rng.getRandomNumber(4) == 0) {
                 Cell nextCell = cell.getNeighbor(0, 1);    //Down
-                if (movement.isValidMove(nextCell)) {
-                    cell.setActor(null);
-                    nextCell.setActor(actor);
-                    cell = nextCell;
-                    actor.setCell(cell);
-                } else moveEnemy(actor);
+                moveGhost(actor, map, cell, nextCell);
             } else if (rng.getRandomNumber(4) == 1) {
                 Cell nextCell = cell.getNeighbor(0, -1);    //Up
-                if (movement.isValidMove(nextCell)) {
-                    cell.setActor(null);
-                    nextCell.setActor(actor);
-                    cell = nextCell;
-                    actor.setCell(cell);
-                } else moveEnemy(actor);
+                moveGhost(actor, map, cell, nextCell);
             } else if (rng.getRandomNumber(4) == 2) {
                 Cell nextCell = cell.getNeighbor(-1, 0);    //Left
-                if (movement.isValidMove(nextCell)) {
-                    cell.setActor(null);
-                    nextCell.setActor(actor);
-                    cell = nextCell;
-                    actor.setCell(cell);
-                } else moveEnemy(actor);
+                moveGhost(actor, map, cell, nextCell);
             } else if (rng.getRandomNumber(4) == 1) {
                 Cell nextCell = cell.getNeighbor(1, 0);    //Right
-                if (movement.isValidMove(nextCell)) {
-                    cell.setActor(null);
-                    nextCell.setActor(actor);
-                    cell = nextCell;
-                    actor.setCell(cell);
-                } else moveEnemy(actor);
+                moveGhost(actor, map, cell, nextCell);
             }
         }
+    }
+
+    private void moveGhost(Actor actor, GameMap map, Cell cell, Cell nextCell) {
+        if (movement.isValidMove(nextCell) && nextCell.getX() <
+                map.getWidth() -1 && nextCell.getY() < map.getHeight() -1) {
+            cell.setActor(null);
+            nextCell.setActor(actor);
+            cell = nextCell;
+            actor.setCell(cell);
+        } else moveEnemy(actor, map);
     }
 }
