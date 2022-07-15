@@ -56,15 +56,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Label label = new Label(BEGINNING_TEXT);
-
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().setAll(label);
-
-        Scene scene1 = new Scene(stackPane, 500, 400);
-        Stage stage = new Stage();
-        stage.setScene(scene1);
-        stage.showAndWait();
+        printMessage(BEGINNING_TEXT);
 
         ui.setPrefWidth(200);
         ui.setPadding(new Insets(50));
@@ -108,6 +100,9 @@ public class Main extends Application {
                 if (level == 3){
                     moveGuardian(guardian, player);
                 }
+                if (hasLost()){
+                    printMessage(LOSE_MESSAGE);
+                }
                 changeLevel(player);
                 refresh();
                 break;
@@ -118,6 +113,9 @@ public class Main extends Application {
                 moveGhost();
                 if (level == 3){
                     moveGuardian(guardian, player);
+                }
+                if (hasLost()){
+                    printMessage(LOSE_MESSAGE);
                 }
                 changeLevel(player);
                 refresh();
@@ -130,6 +128,9 @@ public class Main extends Application {
                 if (level == 3){
                     moveGuardian(guardian, player);
                 }
+                if (hasLost()){
+                    printMessage(LOSE_MESSAGE);
+                }
                 changeLevel(player);
                 refresh();
                 break;
@@ -140,6 +141,9 @@ public class Main extends Application {
                 moveGhost();
                 if (level == 3){
                     moveGuardian(guardian, player);
+                }
+                if (hasLost()){
+                    printMessage(LOSE_MESSAGE);
                 }
                 changeLevel(player);
                 refresh();
@@ -183,18 +187,35 @@ public class Main extends Application {
 
     private void changeLevel(Player player) {
         if (player.getCell().getType() == CellType.OPENDOOR) {
+            if (level == 3) {
+                printMessage(WIN_MESSAGE);
+            }
             level++;
             rebuildGui();
         } else if (player.getCell().getType() == CellType.BACKDOOR) {
             level--;
+            player.setHealth(player.getHealth() - 5);
             rebuildGui();
         }
 
     }
 
+    private void printMessage(String Message) {
+        Label labelEnd = new Label(Message);
+
+        StackPane stackPane = new StackPane();
+        stackPane.getChildren().setAll(labelEnd);
+
+        Scene scene1 = new Scene(stackPane, 500, 400);
+        Stage stage = new Stage();
+        stage.setScene(scene1);
+        stage.showAndWait();
+    }
+
     private void rebuildGui() {
         int health = map.getPlayer().getHealth();
         int strength = map.getPlayer().getStrength();
+
         map = MapLoader.loadMap(level);
         canvas = new Canvas(
                 Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
@@ -265,7 +286,10 @@ public class Main extends Application {
                 }
             }
         }
-        String BEGINNING_TEXT = "You open your eyes. Your sight is met with a never-ending untamed wilderness.\n" +
+        private boolean hasLost(){
+            return map.getPlayer().getHealth() <= 0;
+        }
+        private static final String BEGINNING_TEXT = "You open your eyes. Your sight is met with a never-ending untamed wilderness.\n" +
                 "This must be hell - you realize. You can vaguely remember getting shot\n" +
                 "by your girlfriend's jealous cousin.\n" +
                 "In that moment of realization, another important thought has crossed your mind.\n" +
@@ -276,6 +300,15 @@ public class Main extends Application {
                 "to embark on a journey through hell. Will you be able to escape hells claws or will\n" +
                 "you succumb to it's treacheries like countless other souls roaming this plain? \n\n\n" +
                 "Close the window to start the game!";
+        private static final String WIN_MESSAGE = "Thinking you are out, you notice that your eyes are slowly closing. \n" +
+                "Just a moment before your soul slams the ground, you FINALLY REALIZE IT. \n" +
+                "You have never been able to get out, despite trying millions and millions of time. \n" +
+                "Hell will never let a soul out of it's grasp.\n" +
+                "Understanding that this cycle will only repeat over and over again for eternity, you finally let go.\n" +
+                "Your memory fades away like the morning frost on a fresh spring dawn.\n" +
+                "You open your eyes... \n";
+
+        private static final String LOSE_MESSAGE = "YOU DIED!";
      }
     /*}
 

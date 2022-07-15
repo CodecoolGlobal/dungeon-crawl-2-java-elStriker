@@ -4,7 +4,7 @@ import com.codecool.dungeoncrawl.data.Cell;
 
 public class Player extends Actor {
     final static int INITIAL_STRENGTH = 5;
-    final static int INITIAL_HEALTH = 30;
+    final static int INITIAL_HEALTH = 40;
 
     public Player(Cell cell) {
         super(cell);
