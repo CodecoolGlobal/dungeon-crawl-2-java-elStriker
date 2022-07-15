@@ -141,46 +141,33 @@ public class Main extends Application {
     private void changeLevel(Player player) {
         if (player.getCell().getType() == CellType.OPENDOOR) {
             level++;
-            map = MapLoader.loadMap(level);
-            canvas = new Canvas(
-                    Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
-                    Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
-            context = canvas.getGraphicsContext2D();
-
-            borderPane = new BorderPane();
-            borderPane.setCenter(canvas);
-            borderPane.setRight(ui);
-            scene = new Scene(borderPane);
-            refresh();
-
-            GameInformation.primaryStage.setScene(scene);
-            refresh();
-            scene.setOnKeyPressed(this::onKeyPressed);
-
-            GameInformation.primaryStage.setTitle("Dungeon Crawl");
-            GameInformation.primaryStage.show();
+            rebuildGui();
         } else if (player.getCell().getType() == CellType.BACKDOOR) {
             level--;
-            map = MapLoader.loadMap(level);
-            canvas = new Canvas(
-                    Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
-                    Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
-            context = canvas.getGraphicsContext2D();
-
-            borderPane = new BorderPane();
-            borderPane.setCenter(canvas);
-            borderPane.setRight(ui);
-            scene = new Scene(borderPane);
-            refresh();
-
-            GameInformation.primaryStage.setScene(scene);
-            refresh();
-            scene.setOnKeyPressed(this::onKeyPressed);
-
-            GameInformation.primaryStage.setTitle("Dungeon Crawl");
-            GameInformation.primaryStage.show();
+            rebuildGui();
         }
 
+    }
+
+    private void rebuildGui() {
+        map = MapLoader.loadMap(level);
+        canvas = new Canvas(
+                Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
+                Math.min(map.getHeight(), 22) * Tiles.TILE_WIDTH);
+        context = canvas.getGraphicsContext2D();
+
+        borderPane = new BorderPane();
+        borderPane.setCenter(canvas);
+        borderPane.setRight(ui);
+        scene = new Scene(borderPane);
+        refresh();
+
+        GameInformation.primaryStage.setScene(scene);
+        refresh();
+        scene.setOnKeyPressed(this::onKeyPressed);
+
+        GameInformation.primaryStage.setTitle("Dungeon Crawl");
+        GameInformation.primaryStage.show();
     }
 
     //ui
