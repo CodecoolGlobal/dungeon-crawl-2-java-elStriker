@@ -4,6 +4,8 @@ import com.codecool.dungeoncrawl.data.Cell;
 import com.codecool.dungeoncrawl.data.CellType;
 import com.codecool.dungeoncrawl.data.actors.Actor;
 import com.codecool.dungeoncrawl.data.actors.Ghost;
+import com.codecool.dungeoncrawl.data.actors.Guardian;
+import com.codecool.dungeoncrawl.data.actors.Player;
 import com.codecool.dungeoncrawl.util.RNG;
 
 public class MovementService {
@@ -54,5 +56,25 @@ public class MovementService {
             cell = nextCell;
             actor.setCell(cell);
         } else moveEnemy(actor, map);
+    }
+    public void moveGuardian(Guardian guardian, Player player, int dx, int dy) {
+        Cell cell = guardian.getCell();
+        Cell nextCell = cell.getNeighbor(dx, dy);
+        if (movement.isValidMove(nextCell)) {
+            cell.setActor(null);
+            nextCell.setActor(guardian);
+            cell = nextCell;
+            guardian.setCell(cell);
+        } else {
+            if (nextCell.getActor() != null) {
+                combatService.exchangeBlows(guardian, nextCell.getActor());
+            } else {
+                if (guardian.getY() > player.getY()) {
+                    moveGuardian(guardian, player, 0, -1);
+                } else {
+                    moveGuardian(guardian, player, 0, 1);
+                }
+            }
+        }
     }
 }

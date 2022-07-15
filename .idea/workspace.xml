@@ -7,9 +7,25 @@
     <list default="true" id="060b18be-fc45-40e1-87d7-cd27eb9effff" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/Tiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/CellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/data/CellType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MapLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/dungeoncrawl/logic/MovementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/ActorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/codecool/dungeoncrawl/logic/ActorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/Tiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/CellType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/data/CellType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/GameMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/GameMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MapLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MapLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/dungeoncrawl/logic/MovementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/map1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

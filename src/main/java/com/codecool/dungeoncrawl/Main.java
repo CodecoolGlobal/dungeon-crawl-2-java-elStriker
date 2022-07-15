@@ -87,32 +87,47 @@ public class Main extends Application {
 
     private void onKeyPressed(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
-            //pick up item on key pressed F
             case UP:
                 Player player = map.getPlayer();
+                Guardian guardian = map.getGuardian();
                 movementService.move(player, inventoryService, 0, -1);
                 moveGhost();
+                if (level == 3){
+                    moveGuardian(guardian, player);
+                }
                 changeLevel(player);
                 refresh();
                 break;
             case DOWN:
                 player = map.getPlayer();
+                guardian = map.getGuardian();
                 movementService.move(player, inventoryService, 0, 1);
                 moveGhost();
+                if (level == 3){
+                    moveGuardian(guardian, player);
+                }
                 changeLevel(player);
                 refresh();
                 break;
             case LEFT:
                 player = map.getPlayer();
+                guardian = map.getGuardian();
                 movementService.move(player, inventoryService, -1 , 0);
                 moveGhost();
+                if (level == 3){
+                    moveGuardian(guardian, player);
+                }
                 changeLevel(player);
                 refresh();
                 break;
             case RIGHT:
                 player = map.getPlayer();
+                guardian = map.getGuardian();
                 movementService.move(player, inventoryService,1, 0);
                 moveGhost();
+                if (level == 3){
+                    moveGuardian(guardian, player);
+                }
                 changeLevel(player);
                 refresh();
                 break;
@@ -136,6 +151,21 @@ public class Main extends Application {
                 refresh();
                 break;
         }
+    }
+
+    private void moveGuardian(Guardian guardian, Player player) {
+        if (guardian.getX() > player.getX()){
+            movementService.moveGuardian(guardian, player, -1, 0);
+        } else if (guardian.getX() < player.getX()){
+            movementService.moveGuardian(guardian, player, 1, 0);
+        } else {
+            if (guardian.getY() > player.getY()) {
+                movementService.moveGuardian(guardian, player, 0, -1);
+            } else {
+                movementService.moveGuardian(guardian, player, 0, 1);
+            }
+        }
+
     }
 
     private void changeLevel(Player player) {

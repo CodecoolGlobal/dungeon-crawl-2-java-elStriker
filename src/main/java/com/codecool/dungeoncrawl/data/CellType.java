@@ -20,7 +20,8 @@ public enum CellType {
     TREE("tree"),
     BLOCK("block"),
     CACTUS("cactus"),
-    BACKDOOR("backdoor");
+    BACKDOOR("backdoor"),
+    GUARDIAN("guardian");
 
     private final String tileName;
 
