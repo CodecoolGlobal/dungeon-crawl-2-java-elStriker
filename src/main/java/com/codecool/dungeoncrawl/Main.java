@@ -17,12 +17,14 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -53,6 +55,17 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        Label label = new Label(BEGINNING_TEXT);
+
+        StackPane stackPane = new StackPane();
+        stackPane.getChildren().setAll(label);
+
+        Scene scene1 = new Scene(stackPane, 500, 400);
+        Stage stage = new Stage();
+        stage.setScene(scene1);
+        stage.showAndWait();
+
         ui.setPrefWidth(200);
         ui.setPadding(new Insets(50));
 
@@ -180,6 +193,8 @@ public class Main extends Application {
     }
 
     private void rebuildGui() {
+        int health = map.getPlayer().getHealth();
+        int strength = map.getPlayer().getStrength();
         map = MapLoader.loadMap(level);
         canvas = new Canvas(
                 Math.min(map.getWidth(), 30) * Tiles.TILE_WIDTH,
@@ -191,6 +206,9 @@ public class Main extends Application {
         borderPane.setRight(ui);
         scene = new Scene(borderPane);
         refresh();
+
+        map.getPlayer().setHealth(health);
+        map.getPlayer().setStrength(strength);
 
         GameInformation.primaryStage.setScene(scene);
         refresh();
@@ -247,6 +265,17 @@ public class Main extends Application {
                 }
             }
         }
+        String BEGINNING_TEXT = "You open your eyes. Your sight is met with a never-ending untamed wilderness.\n" +
+                "This must be hell - you realize. You can vaguely remember getting shot\n" +
+                "by your girlfriend's jealous cousin.\n" +
+                "In that moment of realization, another important thought has crossed your mind.\n" +
+                "\n" +
+                "If I am dead, my wife will freely browse through my phone and see all of my dms.\n" +
+                "I CANNOT LET THAT HAPPEN. \n" +
+                "You get up from the ground and gather every fiber of energy\n" +
+                "to embark on a journey through hell. Will you be able to escape hells claws or will\n" +
+                "you succumb to it's treacheries like countless other souls roaming this plain? \n\n\n" +
+                "Close the window to start the game!";
      }
     /*}
 
